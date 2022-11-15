@@ -4,26 +4,31 @@ class MainClass
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-        var a = 6;
-        var b = 7;
+        var color = Console.ReadLine();
 
-        if (a == b)
+        if (color == "red")
         {
-            Console.WriteLine("Условие истинно");
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("Your color is red!");
+        }
+
+        else if (color == "green")
+        {
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("Your color is green!");
         }
         else
         {
-            Console.WriteLine("Условие ложно");
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Black;
 
-            if (b < 10)
-            {
-                Console.WriteLine("Значение b = {0} меньше 10", b);
-            }
-            else
-            {
-                Console.WriteLine("Значение b = {0} больше 10", b);
-            }
+            Console.WriteLine("Your color is cyan!");
         }
     }
 }
