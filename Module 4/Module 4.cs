@@ -1,12 +1,21 @@
-﻿namespace Module4
+﻿using System;
+
+class MainClass
 {
-    class Program
+     static void Main(string[] args)
     {
-        static void Main(string[] args)
+
+        var a = 6;
+        var b = 7;
+
+        if (a == b)
         {
-            bool trueVar = true;
-            bool ivertedVar = !trueVar;
-            bool instVar = !ivertedVar;
+            Console.WriteLine("Условие истинно");
         }
+        else
+        {
+            Console.WriteLine("Условие ложно");
+        }
+
     }
 }
