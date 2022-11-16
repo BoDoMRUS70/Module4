@@ -1,32 +1,39 @@
 ﻿using System;
 
-namespace Module4
+class MainClass
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+        switch (Console.ReadLine())
         {
-            int sum = 0;
+            case "red":
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
 
-            while (true)
-            {
-                Console.WriteLine("Введите число");
-                var number = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Your color is red!");
+                break;
 
-                if (number < 0)
-                {
-                    continue;
-                }
-                else if (number == 0)
-                {
-                    break;
-                }
+            case "green":
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
 
-                // number > 0
-                sum += number;
-            }
+                Console.WriteLine("Your color is green!");
+                break;
+            case "cyan":
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("Итоговая сумма: {0}", sum);
+                Console.WriteLine("Your color is cyan!");
+                break;
+
+            default:
+                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.Red;
+
+                Console.WriteLine("Your color is yellow!");
+                break;
         }
     }
 }
