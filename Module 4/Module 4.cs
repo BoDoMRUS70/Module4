@@ -4,36 +4,19 @@ class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+        Console.WriteLine("Введите своё имя");
 
-        switch (Console.ReadLine())
+        var name = Console.ReadLine();
+
+        Console.WriteLine("Ваше имя по буквам: ");
+
+        foreach (var ch in name)
         {
-            case "red":
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.ForegroundColor = ConsoleColor.Black;
-
-                Console.WriteLine("Your color is red!");
-                break;
-
-            case "green":
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.Black;
-
-                Console.WriteLine("Your color is green!");
-                break;
-            case "cyan":
-                Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.Black;
-
-                Console.WriteLine("Your color is cyan!");
-                break;
-
-            default:
-                Console.BackgroundColor = ConsoleColor.Yellow;
-                Console.ForegroundColor = ConsoleColor.Red;
-
-                Console.WriteLine("Your color is yellow!");
-                break;
+            Console.Write(ch + " ");
         }
+
+        Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+
+        Console.ReadKey();
     }
 }
