@@ -11,6 +11,7 @@ class MainClass
             for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
                 Console.Write(array[k, i] + " ");
 
+
             Console.WriteLine();
         }
     }
