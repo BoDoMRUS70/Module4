@@ -4,17 +4,42 @@ class MainClass
 {
     static void Main(string[] args)
     {
-        int[][] array = new int[3][];
+        (string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double Age) User;
 
-        array[0] = new int[2] { 1, 2 };
-        array[1] = new int[3] { 1, 2, 3 };
-        array[2] = new int[5] { 1, 2, 3, 4, 5 };
-
-        foreach (var num in array)
+        for (int k = 0; k < 3; k++)
         {
-            foreach (var item in num)
+
+            Console.WriteLine("Введите имя");
+            User.Name = Console.ReadLine();
+
+            Console.WriteLine("Введите фамилию");
+            User.LastName = Console.ReadLine();
+
+            Console.WriteLine("Введите логин");
+            User.Login = Console.ReadLine();
+
+            User.LoginLength = User.Login.Length;
+
+            Console.WriteLine("Есть ли у вас животные? Да или Нет");
+            var result = Console.ReadLine();
+            if (result == "Да")
             {
-                Console.Write(item + " ");
+                User.HasPet = true;
+            }
+            else
+            {
+                User.HasPet = false;
+            }
+
+            Console.WriteLine("Введите возраст пользователя");
+            User.Age = double.Parse(Console.ReadLine());
+
+            User.favcolors = new string[3];
+            Console.WriteLine("Введите три любимых цвета пользователя");
+
+            for (int i = 0; i < User.favcolors.Length; i++)
+            {
+                User.favcolors[i] = Console.ReadLine();
             }
         }
     }
